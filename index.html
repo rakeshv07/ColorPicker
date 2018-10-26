@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/code.js"></script>
+    
+   
+    <style>
+        
+        *{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .container-fluid {
+            margin-top: 0%;
+        }
+        .navbar-custom {
+            color: #FFFFFF;
+            background-color: black;
+        }
+        .footer{
+            background-color: black;
+            color: #FFFFFF;
+            margin-top: 20px;
+        }
+        .div-style{
+        color:#ffffff;   
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+        height:150px;
+        cursor:pointer;  
+        margin-top: 30px;
+        margin-left: 3.9%;
+        float: left;
+        border-radius: 12px;
+    }
+    .div-style:hover{
+                transition-duration: .3s;
+                -webkit-transform: translateY(0px) scale(1.1);
+                transform: translateY(0px) scale(1.2);
+                box-shadow: 0 5px 5px 5px rgba(172, 204, 206, 0.863);
+                z-index: 1;
+                color: #ffffff;
+        }
+        #color1{
+                    background:  #ff8000;
+                    color: #ffffff;
+        }
+        #color2{
+                    background:  #ff8c1a;
+                    color: #ffffff;
+        }
+        #color3{
+                    background:  #ff9933;
+                    color: #ffffff;
+        }
+        #color4{
+                    background:  #ffa64d;
+                    color: #ffffff;
+        }
+        #color5{
+                    background:  #ffb366;
+                    color: #ffffff;
+        }
+        #color6{
+                    background:  #ffbf80;
+                    color: #ffffff;
+        }
+        #color7{
+                    background:  #ffcc99;
+                    color: #ffffff;
+        }
+        #color8{
+                    background:  #e67300;
+                    color: #ffffff;
+        }
+        #color9{
+                    background:  #cc6600;
+                    color: #ffffff;
+        }
+        #color10{
+                    background:  #ffe6cc;
+                    color: #ffffff;
+        }
+        
+        #color11{
+                    background:  #ff0000;
+                    color: #ffffff;
+        }
+        #color12{
+                    background:  #ff1a1a;
+                    color: #ffffff;
+        }
+        #color13{
+                    background:  #e60000;
+                    color: #ffffff;
+        }
+        #color14{
+                    background:  #ff3333;
+                    color: #ffffff;
+        }
+        #color15{
+                    background:  #cc0000;
+                    color: #ffffff;
+        }
+        #color16{
+                    background:  #ff4d4d;
+                    color: #ffffff;
+        }
+        #color17{
+                    background:  #b30000;
+                    color: #ffffff;
+        }
+        #color18{
+                    background:  #ff6666;
+                    color: #ffffff;
+        }
+        #color19{
+                    background:  #990000;
+                    color: #ffffff;
+        }
+        #color20{
+                    background:  #ff8080;
+                    color: #ffffff;
+        }
+
+        #color21{
+                    background:  #008000;
+                    color: #ffffff;
+        }
+        #color22{
+                    background:  #009900;
+                    color: #ffffff;
+        }
+        #color23{
+                    background:  #006600;
+                    color: #ffffff;
+        }
+        #color24{
+                    background:  #00b300;
+                    color: #ffffff;
+        }
+        #color25{
+                    background:  #004d00;
+                    color: #ffffff;
+        }
+        #color26{
+                    background:  #00cc00;
+                    color: #ffffff;
+        }
+        #color27{
+                    background:  #80ff80;
+                    color: #ffffff;
+        }
+        #color28{
+                    background:  #00e600;
+                    color: #ffffff;
+        }
+        #color29{
+                    background:  #99ff99;
+                    color: #ffffff;
+        }
+        #color30{
+                    background:  #00ff00;
+                    color: #ffffff;
+        }
+      .nav-header{
+          font-size: 22px;
+          color: white;
+          font-weight: bold;
+      }
+
+      .color-title{
+            background-color: #d1e0e0;
+            margin-left: 2%;
+            margin-right: 2%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: #a300cc;
+            font-weight: bold;
+           
+      }
+    </style>
+
+   
+</head>
+<body  onload="store()">
+    
+       
+     <nav class = "navbar navbar-inverse navbar-fixed-top navbar-custom " role = "navigation">
+   
+        <div class = "navbar-header">
+                <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#example-navbar-collapse">
+                    <span class = "sr-only">Toggle navigation</span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                </button>
+               
+           <a class = "navbar-brand nav-header" href = "#">Color Picker</a>
+         
+        </div>
+        
+        <div class = "collapse navbar-collapse" id = "example-navbar-collapse">
+           <ul class = "nav navbar-nav ">
+               
+              <li class = "active"><a href = "color.html">HOME</a></li>
+              <li class = "active"><a href = "#" data-toggle="modal" data-target="#myModal1">ABOUT</a></li>
+              <li class = "active"><a href = "#" data-toggle="modal" data-target="#myModal2">FEEDBACK</a></li>
+           </ul>
+        </div>
+        
+     </nav>
+    
+     
+    <br><br><br><h1 class="color-title">Orange Color Shades</h1>
+    <div class="container-fluid content" onclick="copyText(event)">    
+        <div id="color1" class="div-style">#ff8000</div>
+        <div id="color2" class="div-style">#ff8c1a</div>
+        <div id="color3" class="div-style">#ff9933</div>
+        <div id="color4" class="div-style">#ffa64d</div>
+        <div id="color5" class="div-style">#ffb366</div>
+        <div id="color6" class="div-style">#ffbf80</div>
+        <div id="color7" class="div-style">#ffcc99</div>
+        <div id="color8" class="div-style">#e67300</div>
+        <div id="color9" class="div-style">#cc6600</div>
+        <div id="color10" class="div-style">#ffe6cc</div>
+    </div>
+             
+    <br><br><h1 class="color-title">Red Color Shades</h1>
+    <div class="container-fluid content" onclick="copyText(event)">    
+        <div id="color11" class="div-style">#ff0000</div>
+        <div id="color12" class="div-style">#ff1a1a</div>
+        <div id="color13" class="div-style">#e60000</div>
+        <div id="color14" class="div-style">#ff3333</div>
+        <div id="color15" class="div-style">#cc0000</div>
+        <div id="color16" class="div-style">#ff4d4d</div>
+        <div id="color17" class="div-style">#b30000</div>
+        <div id="color18" class="div-style">#ff6666</div>
+        <div id="color19" class="div-style">#990000</div>
+        <div id="color20" class="div-style">#ff8080</div>
+    </div>
+2
+    <br><br><h1 class="color-title">Green Color Shades</h1>
+    <div class="container-fluid content" onclick="copyText(event)">    
+        <div id="color21" class="div-style">#008000</div>
+        <div id="color22" class="div-style">#009900</div>
+        <div id="color23" class="div-style">#006600</div>
+        <div id="color24" class="div-style">#00b300</div>
+        <div id="color25" class="div-style">#004d00</div>
+        <div id="color26" class="div-style">#00cc00</div>
+        <div id="color27" class="div-style">#80ff80</div>
+        <div id="color28" class="div-style">#00e600</div>
+        <div id="color29" class="div-style">#99ff99</div>
+        <div id="color30" class="div-style">#00ff00</div>
+    </div>
+  
+     
+
+
+    <br><div class="footer-copyright text-center footer">&copy; 2018 Rakesh Vanam</div><br>
+
+    <!-- Modal About -->
+    <div id="myModal1" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+      
+          <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h1 class="modal-title"><span style="color:red;font-weight:bold;font-family:'Times New Roman', Times, serif;">Color Picker</span></h1>
+                </div>
+                <div class="modal-body">
+                        <span style="color:blue;font-weight:bold;font-family:'Times New Roman', Times, serif;"><h3>Hello Friends,Thanks for using Color Picker.<br>Hope you like this website<br>If any suggestion please send us a feedback.</h3></span>
+                    <h3 style="color:rgb(250, 7, 157);">Design & Developed by,</h3><h2 style="color:#0732f5;font-weight:bold;font-family:'Times New Roman', Times, serif;">Rakesh S Vanam</h2>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+      
+        </div>
+      </div>
+   
+       <!-- Modal Feedback -->
+    <div id="myModal2" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+          
+              <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h1 class="modal-title"><span style="color:red;font-weight:bold;font-family:'Times New Roman', Times, serif;">Color Picker</span></h1>
+                    </div>
+                    <div class="modal-body">
+                            <span style="color:blue;font-weight:bold;font-family:'Times New Roman', Times, serif;"><h3>Send your Feedback/Suggestion to,</h3></span>
+                        <h3 style="color:rgb(250, 7, 157);">Email : <b>rakesh.vanam001@gmail.com</b></h3><h2 style="color:#0732f5;font-weight:bold;font-family:'Times New Roman', Times, serif;">Thank you :)</h2>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+          
+            </div>
+          </div>
+
+    
+</body>
+</html>
